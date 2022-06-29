@@ -1,22 +1,24 @@
 #include<stdio.h>
 int main()
 {
-    int n1=0,n2=1,i,num,n3;
-    scanf("%d",&num);
-    if((num==0)|| (num==1))
+    int a,b,c,n,next;
+    scanf("%d",&n);
+    if(n==0 || n==1)
     {
         printf("True");
     }
     else
     {
-        n3=n1+n2;
-        while(n3<num)
+        a=0;
+        b=1;
+        c=a+b;
+        while(c<n)
         {
-            n1=n2;
-            n2=n3;
-            n3=n1+n2;
+            a=b;
+            b=c;
+            c=a+b;
         }
-        if(n3==num)
+        if(c==n)
         {
             printf("True");
         }
@@ -25,7 +27,5 @@ int main()
             printf("False");
         }
     }
-    
     return 0;
-    
 }
