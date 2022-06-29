@@ -1,22 +1,23 @@
 #include<stdio.h>
 int main()
 {
-    int rem,n,r=0,s,k,t=0,x;
+    int n,i,rev,rem,x,s,t=0,k;
     scanf("%d",&n);
     s=n*n;
-    while(n>0)
+    while(n)
     {
         rem=n%10;
-        n=n/10;
-        r=r*10+rem;
+        n/=10;
+        rev=rev*10+rem;
         
     }
-    k=r*r;
+    k=rev*rev;
     while(k>0)
     {
         x=k%10;
-        k=k/10;
+        k/=10;
         t=t*10+x;
+        
     }
     if(t==s)
     {
